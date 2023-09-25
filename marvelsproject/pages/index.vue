@@ -1,20 +1,24 @@
 <template>
     <div class= "mt-3">
       <h1>Personajes de Marvel</h1>
-      <v-table>
-        <thead>
-                <tr>
-                    <th class="text-left">
-                        Nombre
-                    </th>
-                </tr>
-            </thead>
-        <tbody>
-            <tr v-for="item in personajes" :key="item.id">
-            <td>{{ item.name }}</td>
-        </tr>
-      </tbody>
-    </v-table>
+      
+        
+        
+            <v-container >
+            <v-row >
+            <v-col v-for="item in personajes" :key="item.id" cols = "2">
+            
+            
+            <v-img :src="item.thumbnail.path + '/portrait_fantastic.' + item.thumbnail.extension" />
+            
+            {{ item.name }}
+            
+            </v-col>>
+            </v-row>
+            </v-container>
+            
+      
+   
       
     </div>
   </template>
