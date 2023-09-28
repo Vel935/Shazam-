@@ -1,12 +1,12 @@
 <template>
-    <div class= "mt-3">
-      <h1>Personajes de Marvel</h1>
+    <div class= "mt-3" style="background-color: #252525;">
+      <h1 style="font-family: 'Broadway', sans-serif;">Characters of Marvel</h1>
       
         
         
             <v-container >
             <v-row >
-            <v-col v-for="item in personajes" :key="item.id" cols = "2" row = "2">
+            <v-col v-for="item in personajes" :key="item.id" cols = "2" row = "2" style="background-color: #000;">
             
             
               <v-img :src="item.thumbnail.path + '/portrait_fantastic.' + item.thumbnail.extension" />
@@ -20,6 +20,14 @@
     </div>
     <dialog2 v-if="open_dialog" :dialog="open_dialog" :hero="heroeunico" @close="cerrar" />
   </template>
+  <style>
+  h1 {
+  color: white;
+  background-color: red;
+  text-align: center;
+}
+
+</style>
 <script setup>
 import axios from "axios";
 const personajes = ref({});
