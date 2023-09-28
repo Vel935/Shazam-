@@ -12,7 +12,7 @@
               <v-img :src="item.thumbnail.path + '/portrait_fantastic.' + item.thumbnail.extension" />
             
               {{ item.name }}
-            <v-btn  @click="openDialog(item.id)" > Ver mas info</v-btn>
+            <v-btn  @click="openDialog(item.id)" > More information</v-btn>
             </v-col>
             </v-row>
             </v-container>
