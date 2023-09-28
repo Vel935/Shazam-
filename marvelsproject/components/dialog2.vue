@@ -20,24 +20,24 @@
           </p>
           <h2> Comics</h2>
           <p>
-            {{ hero.comics.available || "Not information available"}}
+            {{ hero.comics.available }}
           </p>
           <h2> Series</h2>
           <p>
-            {{ hero.series.available || "Not information available"}}
+            {{ hero.series.available }}
           </p>
           <h2> Stories</h2>
           <p>
-            {{ hero.stories.available || "Not information available"}}
+            {{ hero.stories.available}}
           </p>
           <h2> Events</h2>
           <p>
-            {{ hero.events.available || "Not information available"}}
+            {{ hero.events.available }}
           </p>
 
           <h2> Some series</h2>
           <p v-for="item in hero.series.items.slice(0,3)" :key="item.name" >
-            {{ item.name}}
+            {{ item.name || "Not information available"}}
           </p>
         </div>
         </v-card-text>
